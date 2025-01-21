@@ -1,7 +1,7 @@
 package org.ies.employees;
 
  public class Programador extends Empleados {
-    private String[] lenguajesDeProgramacion;
+    private  String[] lenguajesDeProgramacion;
 
     public Programador(String nif, String nombre, String apellidos, int horasTrabajadas, String[] lenguajesDeProgramacion) {
         super(nif, nombre, apellidos, horasTrabajadas);

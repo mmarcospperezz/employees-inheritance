@@ -1,7 +1,7 @@
 package org.ies.employees;
 
  public class JefeProyectos extends Empleados {
-    private String[] proyectos;
+    private  String[] proyectos;
 
     public JefeProyectos(String nif, String nombre, String apellidos, int horasTrabajadas, String[] proyectos) {
         super(nif, nombre, apellidos, horasTrabajadas);

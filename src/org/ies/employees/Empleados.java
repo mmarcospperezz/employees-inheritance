@@ -1,5 +1,7 @@
 package org.ies.employees;
 
+import java.util.Objects;
+
 public abstract class Empleados {
         private String nif;
         private String nombre;
@@ -25,4 +27,49 @@ public abstract class Empleados {
                 this.horasTrabajadas += horas;
             }
         }
+
+    public String getNif() {
+        return nif;
     }
+
+    public void setNif(String nif) {
+        this.nif = nif;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public int getHorasTrabajadas() {
+        return horasTrabajadas;
+    }
+
+    public void setHorasTrabajadas(int horasTrabajadas) {
+        this.horasTrabajadas = horasTrabajadas;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Empleados empleados = (Empleados) o;
+        return horasTrabajadas == empleados.horasTrabajadas && Objects.equals(nif, empleados.nif) && Objects.equals(nombre, empleados.nombre) && Objects.equals(apellidos, empleados.apellidos);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nif, nombre, apellidos, horasTrabajadas);
+    }
+}
